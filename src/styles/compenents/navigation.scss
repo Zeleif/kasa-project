@@ -3,6 +3,7 @@
         display: flex;
         justify-content: flex-end;
         margin: 30px;
+        max-width: 1440px;
 
         a {
             text-decoration: none;
@@ -28,12 +29,11 @@
                 width: 0;
                 background: $color-1;
                 position: absolute;
-                border-radius: 10px;
                 bottom: 0px;
                 left: 50%;
                 transform: translateX(-50%);
                 -webkit-animation: anim 0.1s ease forwards;
-                animation: anim 0.1s ease forwards;
+                animation: anim 0.1s ease forwards; // 
 
                 @-webkit-keyframes anim {
                     to {
