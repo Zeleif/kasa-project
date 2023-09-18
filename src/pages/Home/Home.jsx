@@ -8,7 +8,7 @@ import jsonData from '../../data/data.json';
 
 
 const Home = () => {
-    const housingItems = jsonData.map((item, index) => {
+    const housingItems = jsonData.slice(0, 6).map((item, index) => {
 
         return (
             <Link to={`/logement/${item.id}`} key={item.id}>

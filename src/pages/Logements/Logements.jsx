@@ -14,10 +14,6 @@ const Logement = () => {
         return <div>Logement non trouvé.</div>;
     }
 
-    const toggleDescription = () => {
-        setDescriptionVisible(!descriptionVisible);
-    };
-
     return (
         <div className="card-container">
             <Navigation />
@@ -25,7 +21,7 @@ const Logement = () => {
                 <img className="photo" src={logement.cover} alt={logement.title} />
                 <h1>{logement.title}</h1>
                 <p>{logement.location}</p>
-                <button onClick={toggleDescription}>
+                <button onClick={() => setDescriptionVisible(!descriptionVisible)}>
                     {descriptionVisible ? 'Masquer la description' : 'Afficher la description'}
                 </button>
                 {descriptionVisible && <p>{logement.description}</p>}
@@ -33,6 +29,4 @@ const Logement = () => {
         </div>
     );
 };
-
-
 export default Logement;
