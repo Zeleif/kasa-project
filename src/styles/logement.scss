@@ -1,0 +1,38 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+    .card {
+        flex: 0 1 calc(33.33% - 20px);
+        max-width: calc(33.33% - 20px);
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.2s ease;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            margin-top: 10px;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+
+        span {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+    }
+}

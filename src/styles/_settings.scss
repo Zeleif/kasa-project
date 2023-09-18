@@ -6,6 +6,7 @@
 $font-1: "font-1", sans-serif;
 
 $color-1: #FF6060;
+$color-2: #dcdcdc;
 $white: rgb(243, 243, 243);
 
 @mixin verticalCenter {
@@ -23,7 +24,6 @@ $white: rgb(243, 243, 243);
 body {
     background: $white;
     font-family: $font-1;
-    // @include verticalCenter;
 }
 
 li {
