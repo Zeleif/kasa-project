@@ -22,6 +22,7 @@ span {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 1240px;
+    height: 829px;
     background-color: gainsboro;
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +36,7 @@ span {
     height: 340px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 20px;
+    margin-top: 35px;
     box-sizing: border-box;
 
     z-index: 1;
