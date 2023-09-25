@@ -1,5 +1,6 @@
 @import "./settings";
-@import "./compenents/navigation.scss";
-@import "./home.scss";
-@import "./logement.scss";
-@import ".././components/Header/logo.scss"
+@import "./../components/Header/navigation.scss";
+@import ".././components/Header/logo.scss";
+@import "../pages/Home/Home.scss";
+@import "../pages/About/about.scss";
+@import "../pages/Logements/logement.scss";

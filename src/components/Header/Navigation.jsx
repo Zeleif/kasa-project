@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import Logo from '../Logo';
+import { NavLink } from 'react-router-dom';
+import Logo from '../Header/Logo';
 
 
 const Navigation = () => {
@@ -8,12 +8,12 @@ const Navigation = () => {
         <div className="navigation">
             <Logo />
             <ul>
-                <Link to='/' className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                <NavLink to='/' className={(nav) => (nav.isActive ? "nav-active" : "")}>
                     <li>Accueil</li>
-                </Link>
-                <Link to='/about' className={(nav) => (nav.isActive ? "nav-active" : "")}>
+                </NavLink>
+                <NavLink to='/about' className={(nav) => (nav.isActive ? "nav-active" : "")}>
                     <li>A propos</li>
-                </Link>
+                </NavLink>
             </ul>
         </div>
     );
