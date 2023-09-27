@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "../../components/Header/Navigation"
 import Accordion from "../../components/Accordion/Accordion";
 
+
 const About = () => {
     return (
         <div>

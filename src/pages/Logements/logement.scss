@@ -1,14 +1,19 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 10px;
     justify-content: space-between;
     gap: 20px;
+    max-width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+
 
     .card-banner {
-        border: 1px solid #ccc;
         padding: 20px;
         box-sizing: border-box;
         transition: transform 0.2s ease;
+
 
         .photo {
             width: 100%;
@@ -23,8 +28,85 @@
         }
 
         p {
-            margin-top: 5px;
+            margin-top: 10px;
             color: $color-1;
         }
+
+        .tags {
+            white-space: nowrap;
+            margin-top: 10px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .tag-container {
+            margin-right: 5px;
+        }
+
+        .tag {
+            background-color: $color-1;
+            padding: 5px 10px;
+            border-radius: 10px;
+            color: $white;
+        }
+
+        .accordion-logement {
+            margin-top: 20px;
+        }
+
+        .accordion-header-logement {
+            background-color: $color-1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 10px;
+            padding: 10px;
+            color: $white;
+        }
+
+        .card-description {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        $hauteurContenu: 200px;
+        $tempsAnimation: 0.1s;
+
+        .content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 10px;
+            border-radius: 5px;
+            background-color: $color-2;
+            color: $color-1;
+            opacity: 0;
+            transform: translateY(-50%);
+            transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out, visibility 0s $tempsAnimation;
+            transform-origin: top;
+            z-index: 0;
+
+            &.opening {
+                display: flex;
+                align-items: center;
+                min-height: 80px;
+                max-height: $hauteurContenu;
+                opacity: 1;
+                margin-top: -5px;
+                transform: translateY(0%);
+                transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
+            }
+
+            &.closing {
+                max-height: 0;
+                opacity: 0;
+                transform: translateY(-100%);
+                transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
+            }
+        }
     }
+
 }
