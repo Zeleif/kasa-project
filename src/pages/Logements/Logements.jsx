@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../../components/Header/Navigation';
 import jsonData from '../../data/data.json';
 import AccordionLogement from '../Logements/AccordionLogement'
+import StarRating from './StarRating';
+
 
 
 
@@ -15,13 +17,17 @@ const Logement = () => {
     if (!logement) {
         return <div>Logement non trouvé.</div>;
     }
+    const rating = parseInt(logement.rating);
+    const hostName = logement.host.name;
+    const hostPicture = logement.host.picture;
+
     return (
         <div className="card-container">
             <Navigation />
             <div className="card-banner">
                 <img className="photo" src={logement.cover} alt={logement.title} />
                 <div className="card-logement">
-                    <div className="logement_name">
+                    <div className="logement-name">
                         <h1>{logement.title}</h1>
                     </div>
                     <div className="logement-localisation">
@@ -33,6 +39,13 @@ const Logement = () => {
                                 <p className="tag">{tag}</p>
                             </div>
                         ))}
+                    </div>
+                    <div className="rating">
+                        <StarRating rating={rating} />
+                    </div>
+                    <div className="host-infos">
+                        <h2 className='host-name'>{hostName}</h2>
+                        <img className="host" src={hostPicture} alt={hostName} />
                     </div>
                     <div className="card-description">
                         <AccordionLogement title="Description" className="custom-accordion" >

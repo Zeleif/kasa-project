@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Header/Navigation';
 import jsonData from '../../data/data.json';
+import Footer from '../../components/Footer/Footer';
 
 
 
@@ -31,5 +32,6 @@ const Home = () => {
         </div>
     );
 };
+<Footer />
 
 export default Home;

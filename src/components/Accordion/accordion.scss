@@ -5,12 +5,18 @@
     margin-right: auto;
     color: $white;
 
+    .quality {
+        height: 33vh;
+        padding: 10px;
+    }
+
     .accordion-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
         padding: 10px;
+        margin-top: 20px;
         cursor: pointer;
         background-color: $color-1;
         max-width: 1240px;

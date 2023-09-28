@@ -4,22 +4,34 @@
     margin-top: 10px;
     justify-content: space-between;
     gap: 20px;
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
 
 
     .card-banner {
-        padding: 20px;
-        box-sizing: border-box;
-        transition: transform 0.2s ease;
-
+        padding: 10px;
+        width: 100vw;
+        position: relative;
+        height: 60vh;
 
         .photo {
+            max-width: 1240px;
             width: 100%;
             height: 40%;
             object-fit: cover;
             border-radius: 25px;
+            display: block;
+            margin: 0 auto;
+
+        }
+
+        .card-logement {
+            max-width: 1240px;
+            display: block;
+            margin: 0 auto;
+            padding-top: 15px;
+        }
+
+        .logement-name {
+            margin-top: 10px;
         }
 
         h1 {
@@ -33,13 +45,9 @@
         }
 
         .tags {
-            white-space: nowrap;
-            margin-top: 10px;
-        }
-
-        .tags {
             display: flex;
             flex-wrap: wrap;
+            margin-top: 10px;
         }
 
         .tag-container {
@@ -53,60 +61,104 @@
             color: $white;
         }
 
-        .accordion-logement {
-            margin-top: 20px;
-        }
-
-        .accordion-header-logement {
-            background-color: $color-1;
+        .host-infos {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-radius: 10px;
-            padding: 10px;
-            color: $white;
-        }
+            justify-content: end;
 
-        .card-description {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-        }
 
-        $hauteurContenu: 200px;
-        $tempsAnimation: 0.1s;
+            .host {
+                border-radius: 50%;
+                width: 5vw;
+                position: absolute;
+                top: 42%;
 
-        .content {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 10px;
-            border-radius: 5px;
-            background-color: $color-2;
-            color: $color-1;
-            opacity: 0;
-            transform: translateY(-50%);
-            transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out, visibility 0s $tempsAnimation;
-            transform-origin: top;
-            z-index: 0;
+            }
 
-            &.opening {
+            .host-name {
+                color: $color-1;
+                font-weight: 500;
                 display: flex;
-                align-items: center;
-                min-height: 80px;
-                max-height: $hauteurContenu;
-                opacity: 1;
-                margin-top: -5px;
-                transform: translateY(0%);
-                transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
-            }
+                flex-wrap: wrap;
+                max-width: 5%;
+                position: absolute;
+                font-size: 18px;
+                top: 44%;
+                right: 13%;
 
-            &.closing {
-                max-height: 0;
-                opacity: 0;
-                transform: translateY(-100%);
-                transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
             }
+        }
+
+        .rating {
+            display: flex;
+            justify-content: end;
+            margin-top: -10px;
+        }
+
+        .star-rating {
+            font-size: 32px;
+            color: $color-2;
+            position: relative;
+            bottom: 20px;
+            font-style: normal;
+        }
+
+        .star-rating.filled {
+            color: $color-1
+        }
+
+    }
+
+
+    .accordion-header-logement {
+        background-color: $color-1;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 10px;
+        padding: 10px;
+        color: $white;
+    }
+
+    .card-description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    $hauteurContenu: 200px;
+    $tempsAnimation: 0.1s;
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 10px;
+        border-radius: 5px;
+        background-color: $color-2;
+        color: $color-1;
+        opacity: 0;
+        transform: translateY(-50%);
+        transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out, visibility 0s $tempsAnimation;
+        transform-origin: top;
+        z-index: 0;
+
+        &.opening {
+            display: flex;
+            align-items: center;
+            min-height: 80px;
+            max-height: $hauteurContenu;
+            opacity: 1;
+            margin-top: -5px;
+            transform: translateY(0%);
+            transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
+        }
+
+        &.closing {
+            max-height: 0;
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
         }
     }
+
 
 }
