@@ -1,6 +1,6 @@
 .banner {
     @include verticalCenter;
-    width: 1240px;
+    width: 90%;
     height: 210px;
     margin-top: 50px;
     margin-left: auto;
@@ -13,15 +13,17 @@
 span {
     @include verticalCenter;
     position: relative;
+    bottom: 125px;
     color: $white;
     font-size: 48px;
-    // transform: translate(50px, -120px);
+
 }
+
 
 .housing-gallery {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 1240px;
+    width: 90%;
     height: 829px;
     background-color: gainsboro;
     margin-left: auto;
@@ -32,19 +34,18 @@ span {
 .card {
     position: relative;
     flex-direction: column;
-    width: 340px;
-    height: 340px;
+    width: 90%;
+    height: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
     box-sizing: border-box;
-
     z-index: 1;
     cursor: pointer;
 
     &-img {
-        width: 100%;
-        height: 100%;
+        width: 90%;
+        height: 90%;
         object-fit: cover;
         border-radius: 10px;
         filter: brightness(70%);
@@ -58,8 +59,8 @@ span {
         margin: 0;
         opacity: 1;
         transition: opacity 0.3s ease;
-        bottom: 10px;
+        bottom: 50px;
         z-index: 100;
-        width: 100%;
+        width: 90%;
     }
 }

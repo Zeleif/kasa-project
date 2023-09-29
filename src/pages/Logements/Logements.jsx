@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import Navigation from '../../components/Header/Navigation';
 import jsonData from '../../data/data.json';
-import AccordionLogement from '../Logements/AccordionLogement'
+import Accordion from '../../components/Accordion/Accordion';
 import StarRating from './StarRating';
 
 
@@ -48,16 +48,16 @@ const Logement = () => {
                         <img className="host" src={hostPicture} alt={hostName} />
                     </div>
                     <div className="card-description">
-                        <AccordionLogement title="Description" className="custom-accordion" >
+                        <Accordion title="Description" isLogement={true} className="custom-accordion" >
                             Profitez du charme de la vie parisienne dans un magnifique appartement. À 3 minutes à pied du Canal Saint-Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé.
-                        </AccordionLogement>
-                        <AccordionLogement title="Equipements" className="custom-accordion" >
+                        </Accordion>
+                        <Accordion title="Equipements" isLogement={true} className="custom-accordion" >
                             <ul className='equipement-list'>
                                 {logement.equipments.map((equipment, index) => (
                                     <li key={index} className='equipement'>{equipment}</li>
                                 ))}
                             </ul>
-                        </AccordionLogement>
+                        </Accordion>
                     </div>
                 </div>
             </div>

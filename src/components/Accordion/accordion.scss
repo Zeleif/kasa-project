@@ -1,3 +1,7 @@
+.quality {
+    padding: 12px;
+}
+
 .accordion {
     margin: 10px 0;
     max-width: 1240px;
@@ -5,10 +9,6 @@
     margin-right: auto;
     color: $white;
 
-    .quality {
-        height: 33vh;
-        padding: 10px;
-    }
 
     .accordion-header {
         display: flex;
@@ -41,7 +41,6 @@
     }
 
 
-    $hauteurContenu: 200px;
     $tempsAnimation: 0.1s;
 
     .content {
@@ -49,7 +48,7 @@
         overflow: hidden;
         padding: 0 10px;
         border-radius: 5px;
-        background-color: $color-2;
+        background-color: $color-3;
         color: $color-1;
         opacity: 0;
         transform: translateY(-50%);
@@ -60,8 +59,8 @@
         &.opening {
             display: flex;
             align-items: center;
-            min-height: 80px;
-            max-height: $hauteurContenu;
+            padding: 20px;
+            max-height: fit-content;
             opacity: 1;
             margin-top: -5px;
             transform: translateY(0%);

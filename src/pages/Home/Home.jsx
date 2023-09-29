@@ -10,11 +10,11 @@ const Home = () => {
     const housingItems = jsonData.slice(0, 6).map((item, index) => {
 
         return (
-            <Link to={`/logement/${item.id}`} key={item.id}>
-                <div className="card">
-                    <img className='card-img' src={item.cover} alt={item.title} />
-                    <h3 className='title'>{item.title}</h3>
-                </div>
+            <Link to={`/logement/${item.id}`} key={item.id} className='card'>
+
+                <img className='card-img' src={item.cover} alt={item.title} />
+                <h3 className='title'>{item.title}</h3>
+
             </Link>
         )
     });

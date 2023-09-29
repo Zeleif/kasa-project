@@ -2,6 +2,7 @@ import React from 'react';
 import LogoWhite from '../Header/LogoWhite';
 
 const Footer = () => {
+
     return (
         <footer className="footer-container">
             <div className="footer-logo">

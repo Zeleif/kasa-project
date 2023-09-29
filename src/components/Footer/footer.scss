@@ -1,8 +1,6 @@
-/* Footer.scss */
-
 .footer-container {
     @include columnCenter;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     height: 209px;
     background-color: black;
     color: white;
