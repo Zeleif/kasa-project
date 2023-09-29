@@ -2,7 +2,6 @@
 import React from "react";
 import Navigation from "../../components/Header/Navigation"
 import Accordion from "../../components/Accordion/Accordion";
-import Footer from "../../components/Footer/Footer";
 
 
 const About = () => {
@@ -28,7 +27,6 @@ const About = () => {
         </div >
     );
 };
-<Footer />
 export default About;
 
 

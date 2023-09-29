@@ -11,6 +11,7 @@ const StarRating = ({ rating }) => {
                     className={`star-rating ${index < rating ? 'filled' : ''}`}
                 >
                     ★
+
                 </i>
             ))}
         </div>

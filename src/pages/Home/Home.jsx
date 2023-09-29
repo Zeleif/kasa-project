@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Header/Navigation';
 import jsonData from '../../data/data.json';
-import Footer from '../../components/Footer/Footer';
-
 
 
 
@@ -25,13 +23,11 @@ const Home = () => {
             <Navigation />
             <img className="banner" src={require('../../assets/images/img1.png')} alt="" />
             <span>Chez vous, partout et ailleurs</span>
-            <br />
             <div className="housing-gallery">
                 {housingItems}
             </div>
         </div>
     );
 };
-<Footer />
 
 export default Home;
