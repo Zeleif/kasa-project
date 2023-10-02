@@ -82,7 +82,7 @@
                 max-width: 5%;
                 position: absolute;
                 font-size: 18px;
-                top: 44%;
+                top: 45%;
                 right: 13%;
 
             }
@@ -116,5 +116,6 @@
 
     .AccordionLogement {
         width: 100%;
+        z-index: 1;
     }
 }

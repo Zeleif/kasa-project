@@ -1,24 +1,39 @@
 .banner {
     @include verticalCenter;
+    position: relative;
     width: 90%;
     height: 210px;
     margin-top: 50px;
+    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
     filter: brightness(70%);
-    object-fit: cover
+    object-fit: cover;
 }
 
-span {
-    @include verticalCenter;
-    position: relative;
-    bottom: 125px;
+.homeText {
+    position: absolute;
+    top: 27%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: $white;
     font-size: 48px;
 
-}
+    @media screen and (max-width: 768px) {
+        top: 25%;
+        left: 40%;
+        font-size: 40px;
+        width: 75%;
+        padding: 40px;
+    }
 
+    @media screen and (max-width: 450px) {
+        top: 25%;
+        left: 40%;
+        font-size: 30px;
+    }
+}
 
 .housing-gallery {
     display: grid;
@@ -29,18 +44,21 @@ span {
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
+
+    @media screen and (max-width: 450px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card {
     position: relative;
-    flex-direction: column;
+    display: flex;
+    justify-content: center;
     width: 90%;
     height: 90%;
     margin-left: auto;
     margin-right: auto;
     margin-top: 35px;
-    box-sizing: border-box;
-    z-index: 1;
     cursor: pointer;
 
     &-img {
@@ -49,7 +67,6 @@ span {
         object-fit: cover;
         border-radius: 10px;
         filter: brightness(70%);
-
     }
 
     h3 {

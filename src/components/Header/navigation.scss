@@ -4,13 +4,10 @@
     justify-content: space-around;
     width: 100%;
 
-
     ul {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
-
-
     }
 
     li {
@@ -25,5 +22,11 @@
     .nav-active {
         position: relative;
         border-bottom: solid 1px $color-1;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .navigation {
+        font-size: 14px;
     }
 }

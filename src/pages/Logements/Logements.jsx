@@ -7,9 +7,6 @@ import StarRating from './StarRating';
 
 
 
-
-
-
 const Logement = () => {
     const { id } = useParams();
     const logement = jsonData.find(item => item.id === id);

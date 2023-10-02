@@ -54,7 +54,6 @@
         transform: translateY(-50%);
         transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out, visibility 0s $tempsAnimation;
         transform-origin: top;
-        z-index: 0;
 
         &.opening {
             display: flex;

@@ -22,7 +22,9 @@ const Home = () => {
         <div>
             <Navigation />
             <img className="banner" src={require('../../assets/images/img1.png')} alt="" />
-            <span>Chez vous, partout et ailleurs</span>
+            <div className="homeText">
+                <span>Chez vous, partout et ailleurs</span>
+            </div>
             <div className="housing-gallery">
                 {housingItems}
             </div>
