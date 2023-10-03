@@ -26,6 +26,10 @@
             display: block;
             margin: 0 auto;
 
+            @media screen and (max-width: 450px) {
+                height: 50%;
+            }
+
         }
 
         .card-logement {
@@ -35,14 +39,16 @@
             padding-top: 15px;
         }
 
-        .logement-name {
-            margin-top: 10px;
-        }
-
-        h1 {
+        .logement-name h1 {
             margin-top: 10px;
             color: $color-1;
+
+            @media screen and (max-width: 450px) {
+                font-size: 20px;
+                font-weight: 400;
+            }
         }
+
 
         p {
             margin-top: 10px;
@@ -53,6 +59,10 @@
             display: flex;
             flex-wrap: wrap;
             margin-top: 10px;
+
+            @media screen and (max-width: 450px) {
+                font-size: 12px;
+            }
         }
 
         .tag-container {
@@ -88,6 +98,7 @@
                 width: 12vw;
                 position: absolute;
                 right: 0;
+                bottom: -15px;
             }
         }
 
@@ -102,10 +113,10 @@
 
             @media screen and (max-width: 450px) {
                 bottom: 0;
-                right: 30px;
+                right: 5%;
                 width: 25%;
                 font-weight: 400;
-                font-size: 20px;
+                font-size: 16px;
                 color: $color-1;
             }
         }
@@ -114,10 +125,12 @@
             display: flex;
             align-items: center;
 
+
             @media screen and (max-width: 450px) {
                 justify-content: flex-start;
                 margin-top: 0;
                 margin-right: 50px;
+                margin-top: 7px;
             }
         }
 
@@ -125,6 +138,10 @@
             font-size: 32px;
             color: $color-2;
             font-style: normal;
+
+            @media screen and (max-width: 450px) {
+                font-size: 25px;
+            }
         }
 
         .star-rating.filled {
