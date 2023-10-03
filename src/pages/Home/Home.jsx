@@ -5,19 +5,28 @@ import jsonData from '../../data/data.json';
 
 
 
-
 const Home = () => {
-    const housingItems = jsonData.slice(0, 6).map((item, index) => {
+    const largeurEcran = window.innerWidth;
+    const formobile = largeurEcran <= 450;
 
-        return (
+    let housingItems;
+
+    if (formobile) {
+        const slicedData = jsonData.slice(0, 3);
+        housingItems = slicedData.map((item, index) => (
             <Link to={`/logement/${item.id}`} key={item.id} className='card'>
-
                 <img className='card-img' src={item.cover} alt={item.title} />
                 <h3 className='title'>{item.title}</h3>
-
             </Link>
-        )
-    });
+        ));
+    } else {
+        housingItems = jsonData.slice(0, 6).map((item, index) => (
+            <Link to={`/logement/${item.id}`} key={item.id} className='card'>
+                <img className='card-img' src={item.cover} alt={item.title} />
+                <h3 className='title'>{item.title}</h3>
+            </Link>
+        ));
+    }
     return (
         <div>
             <Navigation />

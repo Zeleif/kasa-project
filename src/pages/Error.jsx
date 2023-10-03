@@ -1,11 +1,23 @@
 import React from 'react';
+import Navigation from '../components/Header/Navigation';
+import { Link } from 'react-router-dom';
+
+
 
 
 const Error = () => {
     return (
-        <div>
-            <h1>404</h1>
-            <p>Oups! La page que vous demandez n'existe pas. </p>
+        <div className='Error404'>
+            <Navigation />
+            <div className="erreur">
+                <h1>404</h1>
+            </div>
+            <div className="erreurText">
+                <p>Oups! La page que vous demandez n'existe pas. </p>
+            </div>
+            <div className="lienRetour">
+                <Link to="/">Retourner sur la page d'accueil</Link>
+            </div>
         </div>
     );
 };
