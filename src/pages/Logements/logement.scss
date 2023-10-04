@@ -1,54 +1,60 @@
 .card-container {
     display: flex;
     flex-wrap: wrap;
-    margin-top: 10px;
     justify-content: space-between;
-    gap: 20px;
-    padding-bottom: 45px;
+    gap: 15px;
+    max-width: 1240px;
+    margin: 0 auto;
 
+    .photo {
+        width: 100%;
+        height: 35vh;
+        object-fit: cover;
+        border-radius: 40px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 450px) {
+            height: 50%;
+        }
+
+    }
 
     .card-banner {
-        padding: 10px;
-        width: 100vw;
-        position: relative;
-        height: 60vh;
+        height: fit-content;
+
+
 
         @media screen and (max-width: 450px) {
             margin-bottom: 21.5px;
         }
 
-        .photo {
-            max-width: 1240px;
-            width: 100%;
-            height: 40%;
-            object-fit: cover;
-            border-radius: 25px;
-            display: block;
-            margin: 0 auto;
-
-            @media screen and (max-width: 450px) {
-                height: 50%;
-            }
-
-        }
 
         .card-logement {
-            max-width: 1240px;
-            display: block;
-            margin: 0 auto;
+            font-display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             padding-top: 15px;
         }
 
-        .logement-name h1 {
-            margin-top: 10px;
+
+        .logement-name {
             color: $color-1;
 
-            @media screen and (max-width: 450px) {
-                font-size: 20px;
+            h1 {
                 font-weight: 400;
             }
         }
 
+        .card-logement-toPart {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-logement-partTo {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
 
         p {
             margin-top: 10px;
@@ -76,95 +82,57 @@
             color: $white;
         }
 
-        .host-infos {
-            display: flex;
-            flex-direction: column-reverse;
-            align-items: flex-end;
-            position: relative;
-            margin-top: -60px;
-
-            @media screen and (max-width: 450px) {
-                flex-direction: row;
-                justify-content: space-between;
-                margin-top: -4px;
-            }
-        }
-
-        .host {
-            border-radius: 50px;
-            width: 7vw;
-
-            @media screen and (max-width: 450px) {
-                width: 12vw;
-                position: absolute;
-                right: 0;
-                bottom: -15px;
-            }
-        }
-
-        .host-name {
-            margin-right: 10px;
-            overflow-wrap: break-word;
-            max-width: 50%;
-            position: absolute;
-            bottom: 50%;
-            right: 6%;
-            width: 10%;
-
-            @media screen and (max-width: 450px) {
-                bottom: 0;
-                right: 5%;
-                width: 25%;
-                font-weight: 400;
-                font-size: 16px;
-                color: $color-1;
-            }
-        }
-
         .rating {
-            display: flex;
-            align-items: center;
-
-
-            @media screen and (max-width: 450px) {
-                justify-content: flex-start;
-                margin-top: 0;
-                margin-right: 50px;
-                margin-top: 7px;
-            }
-        }
-
-        .star-rating {
             font-size: 32px;
             color: $color-2;
             font-style: normal;
 
-            @media screen and (max-width: 450px) {
-                font-size: 25px;
+            .star-rating {
+                font-style: normal;
+            }
+
+
+            .star-rating.filled {
+                color: $color-1;
+                font-style: normal;
             }
         }
+    }
 
-        .star-rating.filled {
+    .host-infos {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+
+        .host-name {
             color: $color-1;
+            font-weight: 500;
+            font-size: 20px;
+            width: 50%;
+            margin-right: -10px;
         }
 
-
-        .card-description {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-
-            @media screen and (max-width: 450px) {
-                grid-template-columns: 1fr;
-                gap: 0;
-                margin-top: 15px;
-            }
+        .host {
+            border-radius: 50%;
+            width: 5rem;
         }
+    }
 
-        .AccordionLogement {
-            width: 100%;
-            z-index: 1;
-            margin: 0;
+    .card-description {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @media screen and (max-width: 450px) {
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin-top: 15px;
         }
+    }
+
+    .AccordionLogement {
+        width: 100%;
+        z-index: 1;
+        margin: 0;
     }
 }

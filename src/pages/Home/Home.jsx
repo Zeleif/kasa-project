@@ -2,38 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from '../../components/Header/Navigation';
 import jsonData from '../../data/data.json';
-
+import img1 from '../../assets/images/img1.png';
 
 
 const Home = () => {
-    const largeurEcran = window.innerWidth;
-    const formobile = largeurEcran <= 450;
-
-    let housingItems;
-
-    if (formobile) {
-        const slicedData = jsonData.slice(0, 3);
-        housingItems = slicedData.map((item, index) => (
-            <Link to={`/logement/${item.id}`} key={item.id} className='card'>
+    const housingItems = jsonData.slice(0, 6).map((item, index) => {
+        return (
+            <Link to={`/logement/${item.id}`} key={index} className='card'>
                 <img className='card-img' src={item.cover} alt={item.title} />
                 <h3 className='title'>{item.title}</h3>
             </Link>
-        ));
-    } else {
-        housingItems = jsonData.slice(0, 6).map((item, index) => (
-            <Link to={`/logement/${item.id}`} key={item.id} className='card'>
-                <img className='card-img' src={item.cover} alt={item.title} />
-                <h3 className='title'>{item.title}</h3>
-            </Link>
-        ));
-    }
+        )
+    });
     return (
         <div>
             <Navigation />
-            <img className="banner" src={require('../../assets/images/img1.png')} alt="" />
-            <div className="homeText">
-                <span>Chez vous, partout et ailleurs</span>
-            </div>
+            <img className="banner" src={img1} alt='' />
+            <span className='homeText'>Chez vous, partout et ailleurs</span>
             <div className="housing-gallery">
                 {housingItems}
             </div>
