@@ -4,24 +4,24 @@
 
 .accordion {
     margin: 10px 0;
-    max-width: 1240px;
-    margin-left: auto;
-    margin-right: auto;
     color: $white;
+    width: 70%;
+    margin: auto;
 
+    @media screen and (max-width: 450px) {
+        width: 90%;
+    }
 
     .accordion-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 10px;
+        padding: 12px;
         margin-top: 20px;
+        margin-bottom: 20px;
         cursor: pointer;
         background-color: $color-1;
-        max-width: 1240px;
-        margin-left: auto;
-        margin-right: auto;
         border: none;
         border-radius: 10px;
         transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
@@ -58,19 +58,23 @@
         &.opening {
             display: flex;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
             max-height: fit-content;
             opacity: 1;
-            margin-top: -5px;
+            margin-top: -30px;
+            margin-bottom: 10px;
+            border-radius: 10px;
             transform: translateY(0%);
-            transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
+            transition: opacity 0.3s ease, margin 0.3s ease, transform 0.3s ease;
+
         }
 
         &.closing {
             max-height: 0;
             opacity: 0;
             transform: translateY(-100%);
-            transition: max-height $tempsAnimation ease-in-out, opacity $tempsAnimation ease-in-out, transform $tempsAnimation ease-in-out;
+
+
         }
     }
 }

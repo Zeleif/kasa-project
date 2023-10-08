@@ -13,6 +13,7 @@
 
         &Text {
             @include verticalCenter;
+            text-align: center;
             color: $color-1;
             font-size: 22px;
             font-weight: 500;
@@ -26,34 +27,5 @@
         a {
             color: $color-1;
         }
-    }
-}
-
-@media screen and (min-width: 550px) and (max-width: 767.8px) {
-    .erreur {
-        padding-top: 15.6px;
-    }
-}
-
-
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .Error404 {
-        padding-bottom: 144px;
-
-        .erreur {
-            margin-top: 100px;
-        }
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .erreur {
-        .Text {
-            text-align: center;
-        }
-    }
-
-    .Error404 {
-        padding-bottom: 211px;
     }
 }

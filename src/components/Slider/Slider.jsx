@@ -1,14 +1,54 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 
 
 
-const Slider = () => {
+function Slider({ pictures }) {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => {
+            if (prevIndex === 0) {
+                return pictures.length - 1;
+            } else {
+                return prevIndex - 1
+            }
+        });
+    };
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => {
+            if (prevIndex === pictures.length - 1) {
+                return 0;
+            } else {
+                return prevIndex + 1;
+            };
+        });
+    };
+    const ShowButtons = pictures.length > 1;
+
     return (
-        <div>
-
+        <div className="slider-container">
+            {ShowButtons && (
+                <button onClick={prevSlide} className="prev-button">
+                    <i className="fas fa-chevron-left"></i>
+                </button>
+            )}
+            <div className="image-container">
+                {pictures.map((image, index) => (
+                    <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
+                        <img src={image} alt={`Image ${index}`} />
+                    </div>
+                ))}
+            </div>
+            {ShowButtons && (
+                <button onClick={nextSlide} className="next-button">
+                    <i className="fas fa-chevron-right"></i>
+                </button>
+            )}
         </div>
     );
-};
+}
+
 
 export default Slider;

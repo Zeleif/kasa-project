@@ -4,6 +4,8 @@ import Navigation from '../../components/Header/Navigation';
 import jsonData from '../../data/data.json';
 import Accordion from '../../components/Accordion/Accordion';
 import StarRating from './StarRating';
+import Slider from '../../components/Slider/Slider';
+
 
 
 
@@ -23,7 +25,8 @@ const Logement = () => {
     return (
         <div className="card-container">
             <Navigation />
-            <img className="photo" src={logement.cover} alt={logement.title} />
+            {/* <img className="photo" src={logement.cover} alt={logement.title} /> */}
+            <Slider pictures={logement.pictures} />
             <div className="card-banner">
                 <div className="card-logement-toPart">
                     <div className="card-logement">
