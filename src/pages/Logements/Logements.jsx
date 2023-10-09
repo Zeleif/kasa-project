@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Navigate, useParams } from 'react-router-dom';
 import Navigation from '../../components/Header/Navigation';
 import jsonData from '../../data/data.json';
 import Accordion from '../../components/Accordion/Accordion';
@@ -16,7 +16,9 @@ const Logement = () => {
     const logement = jsonData.find(item => item.id === id);
 
     if (!logement) {
-        return <div>Logement non trouvé.</div>;
+        return (
+            <Navigate to='error404' />
+        );
     }
     const rating = parseInt(logement.rating);
     const hostName = logement.host.name;

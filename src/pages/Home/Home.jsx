@@ -17,8 +17,10 @@ const Home = () => {
     return (
         <div>
             <Navigation />
-            <img className="banner" src={img1} alt='' />
-            <span className='homeText'>Chez vous, partout et ailleurs</span>
+            <div className="header">
+                <img className="banner" src={img1} alt='' />
+                <span className='homeText'>Chez vous, partout et ailleurs</span>
+            </div>
             <div className="housing-gallery">
                 {housingItems}
             </div>

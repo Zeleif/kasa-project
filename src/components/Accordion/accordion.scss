@@ -27,6 +27,10 @@
         transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
         z-index: 1;
 
+        @media screen and (max-width: 450px) {
+            margin-bottom: 0;
+        }
+
         h2 {
             margin: 0;
         }

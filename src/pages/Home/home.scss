@@ -14,18 +14,25 @@
     @media screen and (max-width: 768px) {
         height: 15vh;
     }
+
+    @media screen and (max-width: 450px) {
+        margin-bottom: 15px;
+    }
+}
+
+.header {
+    position: relative;
 }
 
 .homeText {
     position: absolute;
-    top: 27%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: $white;
     font-size: 48px;
 
     @media screen and (max-width: 768px) {
-        top: 20%;
         left: 40%;
         font-size: 40px;
         width: 75%;
@@ -33,7 +40,6 @@
     }
 
     @media screen and (max-width: 450px) {
-        top: 20%;
         font-size: 25px;
         width: 80%;
     }
@@ -97,8 +103,12 @@
         margin: 0;
         opacity: 1;
         transition: opacity 0.3s ease;
-        bottom: 30px;
+        bottom: 15%;
         z-index: 100;
         width: 90%;
+
+        @media screen and (max-width: 450px) {
+            bottom: 20px;
+        }
     }
 }
