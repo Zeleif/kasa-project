@@ -37,7 +37,7 @@ function Slider({ pictures }) {
             <div className="image-container">
                 {pictures.map((image, index) => (
                     <div key={index} style={{ display: index === currentIndex ? 'block' : 'none' }}>
-                        <img src={image} alt={`Image ${index}`} />
+                        <img src={image} alt={`Title.logement ${index}`} />
                     </div>
                 ))}
             </div>
