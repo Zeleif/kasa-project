@@ -21,16 +21,17 @@
         border-radius: 40px;
         margin: 0 auto;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 480px) {
             height: 50%;
         }
 
     }
 
+
     .card-banner {
         height: fit-content;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 480px) {
             margin-bottom: 21.5px;
             padding: 5px;
         }
@@ -46,6 +47,9 @@
             justify-content: space-between;
             padding-top: 15px;
 
+            @media screen and (max-width: 480px) {
+                padding-top: 0;
+            }
         }
 
 
@@ -54,14 +58,20 @@
 
             h1 {
                 font-weight: 400;
+
+                @media screen and (max-width: 480px) {
+                    font-size: 18px;
+                    font-weight: 500;
+                }
             }
         }
 
         .card-logement-toPart {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 15px;
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: 480px) {
                 flex-direction: column;
             }
         }
@@ -71,15 +81,21 @@
             flex-direction: column-reverse;
             align-items: center;
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: 480px) {
                 flex-direction: row;
                 justify-content: space-between;
+                margin-bottom: 10px;
             }
         }
 
         p {
             margin-top: 10px;
             color: $color-1;
+
+            @media screen and (max-width: 480px) {
+                margin-top: 5px;
+                font-size: 14px;
+            }
         }
 
         .tags {
@@ -87,8 +103,9 @@
             flex-wrap: wrap;
             margin-top: 10px;
 
-            @media screen and (max-width: 450px) {
+            @media screen and (max-width: 480px) {
                 font-size: 12px;
+                margin-bottom: 10px;
             }
         }
 
@@ -101,12 +118,22 @@
             padding: 5px 10px;
             border-radius: 10px;
             color: $white;
+
+            @media screen and (max-width: 480px) {
+                font-size: 12px;
+                border-radius: 5px;
+                padding: 3px 15px;
+            }
         }
 
         .rating {
             font-size: 32px;
             color: $color-2;
             font-style: normal;
+
+            @media screen and (max-width: 480px) {
+                font-size: 22px;
+            }
 
             .star-rating {
                 font-style: normal;
@@ -132,8 +159,8 @@
             width: 50%;
             margin-right: -10px;
 
-            @media screen and (max-width: 450px) {
-                font-size: 18px;
+            @media screen and (max-width: 480px) {
+                font-size: 14px;
             }
         }
 
@@ -141,8 +168,8 @@
             border-radius: 50%;
             width: 5rem;
 
-            @media screen and (max-width: 450px) {
-                width: 4rem;
+            @media screen and (max-width: 480px) {
+                width: 3rem;
             }
         }
     }
@@ -152,10 +179,15 @@
         grid-template-columns: 1fr 1fr;
         gap: 40px;
 
-        @media screen and (max-width: 450px) {
+        @media screen and (max-width: 768px) {
+            margin-top: 30px;
+        }
+
+        @media screen and (max-width: 480px) {
             grid-template-columns: 1fr;
-            gap: 0;
-            margin-top: 15px;
+            gap: 15px;
+            margin-top: 0;
+
         }
     }
 

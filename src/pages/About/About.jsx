@@ -8,7 +8,9 @@ const About = () => {
     return (
         <div>
             <Navigation />
-            <img className="banner" src={require('../../assets/images/img2.png')} alt="" />
+            <div className="banner-about">
+                <img className="banner" src={require('../../assets/images/img2.png')} alt="" />
+            </div>
             <br />
             <div className="quality">
                 <Accordion title="Fiabilité">
