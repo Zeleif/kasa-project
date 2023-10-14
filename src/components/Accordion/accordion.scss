@@ -5,9 +5,12 @@
     gap: 15px;
 
     @media screen and (max-width: 768px) {
-        height: 35vh;
-        gap: 0;
-        margin-bottom: 0;
+        margin-top: 90px;
+    }
+
+    @media screen and (max-width: 480px) {
+        margin-top: 50px;
+
     }
 }
 
