@@ -46,6 +46,14 @@ function Slider({ pictures }) {
                     <i className="fas fa-chevron-right"></i>
                 </button>
             )}
+            <div className="container-number">
+                {pictures.length > 1 && (
+                    <p className="photo-number">
+                        {currentIndex + 1} / {pictures.length}
+                    </p>
+
+                )}
+            </div>
         </div>
     );
 }

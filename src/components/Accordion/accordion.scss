@@ -2,16 +2,13 @@
     position: relative;
     display: flex;
     flex-direction: column;
+    margin-top: 40px;
     gap: 15px;
 
-    @media screen and (max-width: 768px) {
-        margin-top: 90px;
-    }
-
     @media screen and (max-width: 480px) {
-        margin-top: 50px;
-
+        margin-top: 28px;
     }
+
 }
 
 .accordion {
@@ -87,14 +84,14 @@
             opacity: 1;
             border-radius: 10px;
             transform: translateY(0%);
-            transition: all 0.7s ease-in-out;
+            transition: all 0.5s ease-in-out;
         }
 
         &.closing {
             max-height: 0;
             opacity: 0;
             transform: translateY(-100%);
-            transition: all 1s ease-out;
+            transition: all 0.7s ease-out;
         }
     }
 }

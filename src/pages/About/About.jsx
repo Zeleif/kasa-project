@@ -11,7 +11,6 @@ const About = () => {
             <div className="banner-about">
                 <img className="banner" src={require('../../assets/images/img2.png')} alt="" />
             </div>
-            <br />
             <div className="quality">
                 <Accordion title="Fiabilité">
                     <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes.</p>

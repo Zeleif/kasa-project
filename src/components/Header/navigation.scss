@@ -4,33 +4,37 @@
     justify-content: space-around;
     width: 100%;
 
+    @media screen and (max-width: 480px) {
+        margin-left: 30px;
+        width: 90%;
+    }
+
     ul {
         display: flex;
         align-items: flex-end;
         justify-content: flex-end;
+
+        @media screen and (max-width: 1024px) {
+            width: 90%;
+            justify-content: space-evenly;
+
+        }
+
+        li {
+            padding: 10px 10px 0 10px;
+        }
     }
 
-    li {
-        color: $color-1;
-        padding: 10px;
-    }
 
     a {
+        padding: 10px;
         text-decoration: none;
+        color: $color-1;
     }
 
     .nav-active {
         position: relative;
         border-bottom: solid 1px $color-1;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .navigation {
-        font-size: 16px;
-    }
-
-    ul {
-        width: 90%;
+        padding: 0;
     }
 }
