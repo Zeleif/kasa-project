@@ -2,13 +2,12 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    margin-bottom: 20px;
     gap: 15px;
 
     @media screen and (max-width: 480px) {
-        margin-top: 28px;
+        margin-top: 80px;
     }
-
 }
 
 .accordion {
@@ -34,11 +33,6 @@
         border-radius: 10px;
         transition: transform 0.5s ease-in-out, background-color 0.5s ease-in-out;
         z-index: 1;
-
-        @media screen and (max-width: 768px) {
-            padding: 15px;
-            gap: 0;
-        }
 
         @media screen and (max-width: 480px) {
             margin-bottom: 0;
