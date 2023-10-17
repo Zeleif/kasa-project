@@ -60,7 +60,7 @@ const Logement = () => {
                 </div>
                 <div className="card-description">
                     <Accordion title="Description" isLogement={true} className="custom-accordion" >
-                        Profitez du charme de la vie parisienne dans un magnifique appartement. À 3 minutes à pied du Canal Saint-Martin, vous serez proche des transports, mais également de nombreux commerces. L'appartement est tout équipé.
+                        {logement.description}
                     </Accordion>
                     <Accordion title="Equipements" isLogement={true} className="custom-accordion" >
                         <ul className='equipement-list'>
