@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
 
-
-
 function Slider({ pictures }) {
     const [currentIndex, setCurrentIndex] = useState(0);
 
