@@ -9,8 +9,6 @@ import Slider from '../../components/Slider/Slider';
 
 
 
-
-
 const Logement = () => {
     const { id } = useParams();
     const logement = jsonData.find(item => item.id === id);

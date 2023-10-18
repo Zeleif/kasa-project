@@ -6,7 +6,7 @@ import img1 from '../../assets/images/img1.png';
 
 
 const Home = () => {
-    const housingItems = jsonData.slice(-6).map((item, index) => {
+    const housingItems = jsonData.map((item, index) => {
         return (
             <Link to={`/logement/${item.id}`} key={index} className='card'>
                 <img className='card-img' src={item.cover} alt={item.title} />

@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from '../components/Header/Navigation';
+import Navigation from '../../components/Header/Navigation';
 import { Link } from 'react-router-dom';
 
 

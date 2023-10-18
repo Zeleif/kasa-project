@@ -1,5 +1,3 @@
-
-// StarRating.js
 import React from 'react';
 
 const StarRating = ({ rating }) => {
